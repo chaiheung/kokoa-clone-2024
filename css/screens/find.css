@@ -1,0 +1,121 @@
+.recommended-friends {
+  margin: 25px 0px;
+  padding: 25px 0px;
+  border-top: var(--border-color);
+  border-bottom: var(--border-color);
+}
+.recommended-friends__title {
+  font-size: 14px;
+  color: var(--title-color);
+}
+.recommended-friends span {
+  margin: 100px 0;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: var(--title-color);
+}
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--title-color);
+  margin-bottom: 25px;
+}
+.open-chat__header span {
+  color: var(--title-color);
+}
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.open-post__title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.open-post__hashtags {
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+.open-post__members {
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+}
+.open-post__members img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.open-post__member-count {
+  color: var(--title-color);
+  font-size: 14px;
+}
+.open-post__members .divider {
+  width: 1px;
+  height: 10px;
+  margin: 0 15px;
+  background-color: silver;
+}
+.open-post__member-status {
+  color: magenta;
+}
+.open-post__photo {
+  position: relative;
+}
+.open-post__photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+.open-post__heart-count {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+}
+.open-post__heart-count span {
+  margin-left: 3px;
+}
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.2);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: transform;
+  animation: heartBeat 1s linear infinite;
+}
+
+@keyframes countBeat {
+  from {
+    color: white;
+    transform: none;
+  }
+  to {
+    color: gold;
+  }
+}
+
+.open-post__heart-count:hover span {
+  will-change: transform;
+  animation: countBeat 1s ease-in-out forwards;
+}
